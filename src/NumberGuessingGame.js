@@ -19,7 +19,7 @@ const NumberGuessingGame = () => {
     //페이지가 다시 로딩되는 것을 방지
     //페이지가 자동으로 새로고침 되는 것을 막아주는 역할
     event.preventDefault();
-    //사용자가 입력한 값을 숫자로 변환해주는 역할
+    //사용자가 입력한 값을 숫자로 변환해주는 역할15
     // 10진수 : 우리가 흔히 사용하는 0~9 숫자를 의미
     const guess = parseInt(userGuess, 10);
 
@@ -39,7 +39,7 @@ const NumberGuessingGame = () => {
         );
       }
       //input값 알아서 지워질 수 있도록 초기화 설정
-      setUserGuess("");
+      setUserGuess([]);
     }
   };
 
@@ -60,6 +60,7 @@ const NumberGuessingGame = () => {
         <button type="submit">제출하기</button>
       </form>
       {message && <div>{message}</div>}
+      <div>입력한 숫자 : {userGuess}</div>
     </div>
   );
 };
